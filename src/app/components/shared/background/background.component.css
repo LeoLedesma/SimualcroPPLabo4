@@ -1,0 +1,14 @@
+#sect1 {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../../../../assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 10%;
+    z-index: -1;
+  }
+  

@@ -1,0 +1,16 @@
+<div *ngIf="entidad != null; else noCargada">
+    <div class="" *ngFor="let key of objectKeys(entidad); let i = index">
+        <div class="mb-3">
+            <div class="mb-3">
+                <label for="detalles{{i}}">{{titulos[i]}}</label>
+            </div>
+            <input type="text" [disabled]="onlyView" class="form-control" id="detalles{{i}}" [(ngModel)]="entidad[key]">
+        </div>
+        <div *ngIf="!onlyView">
+            <input type="button" class="form-control btn btn-dark" value="Guardar cambios">
+        </div>
+    </div>    
+</div>
+<ng-template #noCargada>
+    <p class="lead">** Por favor seleccione un item de la lista **</p>
+</ng-template>

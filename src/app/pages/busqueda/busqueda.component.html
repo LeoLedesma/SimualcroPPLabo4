@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Tabla de elementos</h1>
+      <p class="lead">Agrega, edita o elimina elementos en esta tabla.</p>
+      <hr class="my-4">
+      <app-tabla-pelicula (onChildElement)="onChildElement($event)"></app-tabla-pelicula>
+    </div>
+  
+    <div class="row mt-5">
+      <div class="col-sm-4">
+        <div class="jumbotron">
+          <h1 class="display-6">Borrar Entidad</h1>
+          <p class="lead">Componente destinado para borrar Cierto elemento.</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="jumbotron">
+          <h1 class="display-6">Detalles entidad</h1>
+          <p class="lead">Aqui se mostraran los detalles de la entidad seleccionada.</p>
+          <app-detalles-pelicula [entidad] = "entityFromEvent" [onlyView]="true"></app-detalles-pelicula>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="jumbotron">
+          <h1 class="display-6">Modificar Entidad</h1>
+          <p class="lead">Aqui se modificaran los atributos de la entidad seleccionada.</p>
+          <!-- <app-detalles-pelicula [entidad]="entityFromEvent" [onlyView]="false"></app-detalles-pelicula> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
